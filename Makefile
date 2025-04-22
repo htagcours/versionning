@@ -17,15 +17,15 @@ install: venv clean
 
 bump-patch:
 	@echo "Bumping patch version..."
-	venv/bin/bumpversion patch --allow-dirty
+	venv/bin/bumpversion patch --allow-dirty  --verbose
 	@echo "Patch version bumped."
 
 bump-minor:
 	@echo "Bumping patch version..."
-	venv/bin/bumpversion minor --allow-dirty
+	venv/bin/bumpversion minor --allow-dirty  --verbose
 	@echo "Patch version bumped."
 
 bump-major:
 	@echo "Bumping patch version..."
-	venv/bin/bumpversion major --allow-dirty
+	venv/bin/bumpversion major --allow-dirty  --verbose
 	@echo "Patch version bumped."
