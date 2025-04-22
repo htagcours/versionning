@@ -28,8 +28,8 @@ pipeline {
         }
 
         stage ('Bump version') {
+            // when { anyOf { branch 'hervlokossou'} }
             steps {
-                when { anyOf { branch 'hervlokossou'} }
                 sh "make bump-patch"
             }
         }
