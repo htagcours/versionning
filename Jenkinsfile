@@ -17,7 +17,7 @@ pipeline {
         stage('Project init') {
             steps {
                 sh "make venv && make install"
-                sh "echo ${BRANCH_NAME}"
+                sh "git branch"
             }
         }
 
