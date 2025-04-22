@@ -8,7 +8,7 @@ clean-venv:
 
 venv: clean-venv
 	@echo "Creating virtual environment..."
-	virtualenv --python=python312 venv
+	virtualenv --python=python310 venv
 	@echo "Virtual environment created."
 
 install: venv clean
