@@ -25,7 +25,9 @@ pipeline {
         stage ('Bump version') {
             // when { anyOf { branch 'hervlokossou'} }
             steps {
-                sh "make bump-patch"
+                withCredentials([string(credentialsId: 'global--github-creds', variable: 'USERNAME', passphrase: 'PASSWORD')]) {
+                    sh "make bump-patch"
+                }
             }
         }
     }
