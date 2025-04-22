@@ -22,7 +22,7 @@ pipeline {
 
         stage ('Bump version') {
             when { anyOf { branch 'hervlokossou'} }
-            step {
+            steps {
                 sh "make bump-patch"
             }
         }
