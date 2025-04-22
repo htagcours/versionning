@@ -19,5 +19,12 @@ pipeline {
                 sh "make venv && make install"
             }
         }
+
+        stage ('Bump version') {
+            when { anyOf { branch 'hervlokossou'} }
+            step {
+                sh "make bump-patch"
+            }
+        }
     }
 }
