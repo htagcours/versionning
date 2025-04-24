@@ -26,10 +26,9 @@ pipeline {
             // when { anyOf { branch 'hervlokossou'} }
             steps {
                 withCredentials([usernamePassword(credentialsId: 'global--github-creds', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
-                    sh """make bump-patch
-                    git push origin hervlokossou
-	                sh git push origin --tags
-	                """
+                    sh "make bump-patch"
+                    sh "git push origin hervlokossou"
+	                sh "git push origin --tags"
                 }
             }
         }
