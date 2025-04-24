@@ -27,6 +27,7 @@ pipeline {
             steps {
                 withCredentials([usernamePassword(credentialsId: 'global--github-creds', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
                     sh "make bump-patch"
+                    sh "git checkout hervlokossou"
                     sh "git push origin hervlokossou"
 	                sh "git push origin --tags"
                 }
