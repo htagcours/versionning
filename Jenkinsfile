@@ -36,7 +36,7 @@ pipeline {
                     sh 'git checkout hervlokossou'
                     sh 'make bump-patch'
                     sh 'git push origin refs/remotes/origin/hervlokossou'
-                    sh 'git push origin --tags''
+                    sh 'git push origin --tags'
                 }
             }
         }
