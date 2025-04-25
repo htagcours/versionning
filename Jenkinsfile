@@ -3,7 +3,7 @@ pipeline {
 
     stages {
 
-        stage('Checkout scm') {
+        stage('Checkout SCM') {
             steps {
             withCredentials([usernamePassword(credentialsId: 'global--github-creds', passwordVariable: 'PASSWORD', usernameVariable: 'USERNAME')]){
                     checkout scm: [
