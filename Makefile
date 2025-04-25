@@ -18,6 +18,7 @@ install: venv clean
 bump-patch:
 	@echo "Bumping patch version..."
 	venv/bin/bumpversion patch --allow-dirty  --verbose
+	git push origin -f
 	venv/bin/bumpversion release --allow-dirty  --verbose
 	@echo "Patch version bumped."
 
