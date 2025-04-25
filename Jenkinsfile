@@ -26,9 +26,9 @@ pipeline {
             steps {
                 withCredentials([usernamePassword(credentialsId: 'global--github-creds', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
                     sh "make bump-patch"
-                    sh "git config user.name ${USERNAME}"
-                    sh "git config user.password ${PASSWORD}"
-	                sh "git push --tags"
+                    // sh "git config user.name ${USERNAME}"
+                    // sh "git config user.password ${PASSWORD}"
+	                // sh "git push --tags"
                 }
             }
         }
