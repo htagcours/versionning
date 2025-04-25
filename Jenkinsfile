@@ -3,6 +3,12 @@ pipeline {
 
     stages {
 
+        stage('Checkout scm') {
+            steps {
+                checkout scm
+            }
+        }
+
         stage('Hello') {
             steps {
                 echo 'Hello World'
