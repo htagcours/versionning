@@ -35,9 +35,8 @@ pipeline {
                     sh 'git config --global user.password "${GIT_PASSWORD}"'
                     sh 'git checkout hervlokossou'
                     sh 'make bump-patch'
-                    // sh "git config user.name ${USERNAME}"
-                    // sh "git config user.password ${PASSWORD}"
-	                // sh "git push --tags"
+                    sh 'git push origin refs/remotes/origin/hervlokossou'
+                    sh 'git push origin --tags''
                 }
             }
         }
