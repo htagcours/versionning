@@ -30,7 +30,7 @@ pipeline {
 
         stage ('Bump version') {
             steps {
-                withCredentials([usernamePassword(credentialsId: 'global--github-creds', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
+                withCredentials([usernamePassword(credentialsId: 'global--github-creds', usernameVariable: 'GIT_USERNAME', passwordVariable: 'GIT_PASSWORD')]) {
                     sh 'git config --global user.name "${GIT_USERNAME}"'
                     sh 'git config --global user.password "${GIT_PASSWORD}"'
                     sh 'git checkout hervlokossou'
