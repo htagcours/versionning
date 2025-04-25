@@ -5,7 +5,12 @@ pipeline {
 
         stage('Checkout scm') {
             steps {
-                checkout scm
+            withCredentials([usernamePassword(credentialsId: 'global--github-creds', passwordVariable: 'PASSWORD', usernameVariable: 'USERNAME')]){
+                    checkout scm: [
+                        $class: 'GitSCM',
+                        branches: [[name: "hervlokossou"]]
+                    ]
+                }
             }
         }
 
